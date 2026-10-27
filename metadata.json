@@ -1,0 +1,6 @@
+{
+  "name": "EduPilot AI — Notice Analyzer & Practice Test Generator",
+  "description": "AI study notes and college notice assistant powered by Gemma 4. Analyze exam circulars, deadlines, eligibility, and generate interactive practice tests.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

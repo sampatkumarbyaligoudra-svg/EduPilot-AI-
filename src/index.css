@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #07040d;
+    color: #f3f4f6;
+  }
+}
+
+@keyframes floatGhost {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(4deg);
+  }
+}
+
+@keyframes batFly {
+  0% {
+    transform: translateX(-15vw) translateY(0px) scale(0.85);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.75;
+  }
+  50% {
+    transform: translateX(50vw) translateY(-25px) scale(1);
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(115vw) translateY(10px) scale(0.9);
+    opacity: 0;
+  }
+}
+
+@keyframes pumpkinPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(249, 115, 22, 0.45));
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(249, 115, 22, 0.85));
+  }
+}
+
+@keyframes eerieGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.2), inset 0 0 15px rgba(249, 115, 22, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(249, 115, 22, 0.35), inset 0 0 25px rgba(168, 85, 247, 0.2);
+  }
+}
+
+@keyframes cauldronBubble {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.animate-float-ghost {
+  animation: floatGhost 4.5s ease-in-out infinite;
+}
+
+.animate-bat-fly {
+  animation: batFly 22s linear infinite;
+}
+
+.animate-bat-fly-delayed {
+  animation: batFly 26s linear infinite 11s;
+}
+
+.animate-pumpkin-pulse {
+  animation: pumpkinPulse 3s ease-in-out infinite;
+}
+
+.animate-eerie-glow {
+  animation: eerieGlow 4s ease-in-out infinite;
+}
+
+/* Custom Spooky Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #090514;
+}
+::-webkit-scrollbar-thumb {
+  background: #f97316;
+  border-radius: 9999px;
+  border: 2px solid #090514;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fb923c;
+}
